@@ -4,11 +4,11 @@ const HomeCard = ({ item }) => {
   const { image, title, description } = item;
 
   return (
-    <Card>
+    <Card className="h-100">
       <CardImg src={image} alt={title} />
       <CardBody>
         <CardTitle>{title}</CardTitle>
-        <CardBody>{description}</CardBody>
+        <CardBody className="d-none d-md-block">{description}</CardBody>
       </CardBody>
     </Card>
   );

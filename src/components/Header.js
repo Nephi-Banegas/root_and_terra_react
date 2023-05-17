@@ -9,7 +9,7 @@ import {
 } from "reactstrap";
 import { NavLink } from "react-router-dom";
 
-import RTLogo from "../app/assets/images/white_logo.png";
+import RTLogo from "../app/assets/images/white_logo_512x512.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,11 +18,14 @@ const Header = () => {
     <Navbar dark color="primary"  expand="md">
       <NavbarBrand className="ms-5" href="/">
         <img src={RTLogo} alt="root and terra logo" className="float-start" />
+      </NavbarBrand>
 
         <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
         <Collapse isOpen={menuOpen} navbar>
-          <Nav className="ms-auto" navbar>
+          <Nav className="mx-auto mt-2 " navbar>
+
             <NavItem>
+              
               <NavLink className="nav-link" to="/">
                 <i className="fa fa-home fa-lg" /> Home
               </NavLink>
@@ -44,7 +47,7 @@ const Header = () => {
             </NavItem>
           </Nav>
         </Collapse>
-      </NavbarBrand>
+      
     </Navbar>
   );
 };
