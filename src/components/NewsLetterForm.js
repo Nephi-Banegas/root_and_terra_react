@@ -15,19 +15,19 @@ const NewsLetterForm = () => {
 
   return (
     <>
-      <Col >
-      <Button
-        color="success"
-        type="submit"
-        onClick={() => setNewsLeterModalOpen(true)}
-        className="btn-lg"
-      >
-        Join News Letter
-      </Button>
+      <Col>
+        <Button
+          color="success"
+          type="submit"
+          onClick={() => setNewsLeterModalOpen(true)}
+          className="btn-lg"
+        >
+          Join News Letter
+        </Button>
       </Col>
 
       <Modal isOpen={newsLetterModalOpen}>
-        <ModalHeader toggle={() => setNewsLeterModalOpen(false)}>
+        <ModalHeader toggle={() => setNewsLeterModalOpen(false)} style={{backgroundColor: "khaki", color: "olive"}}>
           Join News Letter
         </ModalHeader>
         <ModalBody>
@@ -51,19 +51,38 @@ const NewsLetterForm = () => {
               <FormGroup row>
                 <Label>Email Frequency:</Label>
                 <Col xs="2">
-                  <label style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+                  <label
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "5px",
+                    }}
+                  >
                     <Field type="radio" name="frequency" value="Weekly" />
                     Weekly
                   </label>
                 </Col>
                 <Col xs="2">
-                  <label style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+                  <label
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "5px",
+                    }}
+                  >
                     <Field type="radio" name="frequency" value="Monthly" />
                     Monthly
                   </label>
                 </Col>
                 <Col xs="2">
-                  <label style={{ display: "flex", alignItems: "center", gap: "5px" }} className="mx-2">
+                  <label
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "5px",
+                    }}
+                    className="mx-2"
+                  >
                     <Field type="radio" name="frequency" value="Quarterly" />
                     Quarterly
                   </label>
@@ -71,10 +90,10 @@ const NewsLetterForm = () => {
               </FormGroup>
               <FormGroup row>
                 <Col xs="2">
-                    <Button>Cancel</Button>
+                  <Button>Cancel</Button>
                 </Col>
                 <Col xs="3">
-                    <Button color="success">Join</Button>
+                  <Button color="success">Join</Button>
                 </Col>
               </FormGroup>
             </Form>
